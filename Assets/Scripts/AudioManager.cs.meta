@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 1025604fc81268342bd82c3272130eda
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - backgroundMusic: {instanceID: 0}
+  - fruitCollectSound: {instanceID: 0}
+  - fruitLoseSound: {instanceID: 0}
+  - groundHitSound: {instanceID: 0}
+  - gameOverSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
