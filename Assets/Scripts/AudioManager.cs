@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class AudioManager : Singleton<AudioManager>
 {
-    public static AudioManager Instance;
     public AudioClip backgroundMusic;
     public AudioClip fruitCollectSound;
     public AudioClip fruitLoseSound;
@@ -11,21 +10,14 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource backgroundAudioSource;
     private AudioSource effectAudioSource;
-    
-    void Awake()
+
+    protected override void Awake()
     {
-        // Nếu chưa có Instance, gán nó
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        base.Awake();
+        InitializeAudioSources();
     }
-    void Start()
+
+    private void InitializeAudioSources()
     {
         backgroundAudioSource = gameObject.AddComponent<AudioSource>();
         effectAudioSource = gameObject.AddComponent<AudioSource>();
@@ -50,21 +42,26 @@ public class AudioManager : MonoBehaviour
 
     public void PlayFruitCollectSound()
     {
-        effectAudioSource.PlayOneShot(fruitCollectSound);
+        PlayEffectSound(fruitCollectSound);
     }
 
     public void PlayFruitLoseSound()
     {
-        effectAudioSource.PlayOneShot(fruitLoseSound);
+        PlayEffectSound(fruitLoseSound);
     }
 
     public void PlayGroundHitSound()
     {
-        effectAudioSource.PlayOneShot(groundHitSound);
+        PlayEffectSound(groundHitSound);
     }
 
     public void PlayGameOverSound()
     {
-        effectAudioSource.PlayOneShot(gameOverSound);
+        PlayEffectSound(gameOverSound);
+    }
+
+    private void PlayEffectSound(AudioClip clip)
+    {
+        effectAudioSource.PlayOneShot(clip, effectAudioSource.volume);
     }
 }
