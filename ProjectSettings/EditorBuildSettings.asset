@@ -12,20 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 3fc8acdd13e6c734bafef6554d6fdbcd
   - enabled: 1
-    path: Assets/Scenes/Settings.unity
-    guid: dfe97f9380b91b146862ea035493e8c5
-  - enabled: 1
     path: Assets/Scenes/LevelSelect.unity
     guid: 59e41b0a7f3341745a4334b4ebc6bac1
-  - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 7ce2ccb06c639cd4d97b9265e7982ed0
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 1e267670632ec2140a3a8a861d6926ef
-  - enabled: 1
-    path: Assets/Scenes/PauseMenu.unity
-    guid: 1b6450b0b3c97f64ea8160ab6d780bd3
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 4bfbe103a978dc5449618cf66de3f389, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 2a3244aebf735d445a542cd27dfdbd0c, type: 2}

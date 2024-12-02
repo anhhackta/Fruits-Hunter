@@ -64,4 +64,11 @@ public class AudioManager : Singleton<AudioManager>
     {
         effectAudioSource.PlayOneShot(clip, effectAudioSource.volume);
     }
+    public void PlayBackgroundMusic()
+    {
+        if (!backgroundAudioSource.isPlaying)
+        {
+            backgroundAudioSource.Play();
+        }
+    }
 }
